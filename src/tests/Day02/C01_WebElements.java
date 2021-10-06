@@ -12,6 +12,10 @@ public class C01_WebElements {
         // <input type="text" class="inputtext _55r1 _6luy" name="email" id="email" data-testid="royal_email"
         // placeholder="E-posta veya Telefon Numarası" autofocus="1" aria-label="E-posta veya Telefon Numarası">
 
+
+        // LOCATORS TESTLERIMIZI OTOMASYON YAPMAK ICIN DRIVER OBJESINI KULLANIRIZ. BU OBJENIN ISTEDIGIMIZ WEBELEMENTINE ULASABILMESI ICIN
+        // WEB ELEMENTLERININ ATTRBUTELARINI KULANARAK VE FIND ELEMENT METHODUYLA BERABER KULLANILMASINA
+
         System.setProperty("webdriver.chrome.driver","C:\\Users\\USER\\Documents\\selenium dependencies\\drivers\\chromedriver.exe");
         WebDriver driver = new ChromeDriver();
 
@@ -59,6 +63,11 @@ public class C01_WebElements {
         System.out.println(girisButonu.isEnabled()); // true yaziyor. butona eristik mi erisemedik mi diye bakiyor.
 
         girisButonu.click();
+
+
+        // KULLANILAN ATTRIBUTE UNIQUE DEGILSE KOD CALISIR FAKAT HANGI ATTRIBUTE SECECGINE KARAR VEREMEZ. HATA VERMIYOR FAKAT NE YAPACAGINA KARAR VEREMIYOR.
+
+        // BAZI WEB SAYFALARINDA EKRAN KUCUK OLDUGUNDAN BAZI LINKLER VEYA WEB ELEMENTSLER GORUNMEYEBILIR. BUNUN ICIN MANAGE().WINDOW().MAXIMIZE()
 
 
 

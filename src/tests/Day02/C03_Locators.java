@@ -78,6 +78,7 @@ public class C03_Locators {
         }
 
         // 3. Sayfada kac tane link oldugunu bulun.
+
         List<WebElement> Linkler = driver.findElements(By.tagName("a"));
         System.out.println(Linkler.size());
 

@@ -79,8 +79,20 @@ public class C03_Locators {
 
         // 3. Sayfada kac tane link oldugunu bulun.
 
-        List<WebElement> Linkler = driver.findElements(By.tagName("a"));
-        System.out.println(Linkler.size());
+        List<WebElement> linkler = driver.findElements(By.tagName("a"));
+        System.out.println(linkler.size());
+
+        // Linklerin yazilarini yazdiralim.
+        // Elimizdeki listedeki tüm web elementlerin yazilarini for ya da foreach loop ile yazdirabiliriz.
+        // for each loop daha kullanislidir.
+
+        for (WebElement each: linkler) {
+            System.out.println(each.getText());
+        }
+
+        // steam api
+
+        linkler.stream().forEach(t-> System.out.println(t.getText()));
 
         driver.close();
 

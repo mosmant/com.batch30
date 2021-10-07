@@ -11,6 +11,12 @@ public class C01_XPath {
         System.setProperty("webdriver.chrome.driver","C:\\Users\\USER\\Documents\\selenium dependencies\\drivers\\chromedriver.exe");
         WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize(); // aliskanlik edinelim ve her driver objesinden sonra bunu yapalim.
+
+        /*============================================================================================
+        ABSOLUTE XPATH FAZLA KULLANILMIYOR VE YENI BIR WEBELEMENT EKLEME DURUMUNDA GECERSIZ KALABILIR.
+        RELATIVE XPATH KULLANILABILIR. UNIQUE LESTIRMEK DAHA KOLAY OLUYOR.
+        ==============================================================================================*/
+
         // 1- https://the-internet.herokuapp.com/add_remove_elements/ adresine gidin
         driver.get("https://the-internet.herokuapp.com/add_remove_elements/");
         // 2- Add Element butonuna basin
@@ -46,5 +52,6 @@ public class C01_XPath {
 
         // StaleElementReferenceException => bazen gorunen bazende gorunmuyecen elementlerde bazen boyle calismayan kodlar cikabilir.
         // burada HTML kodu da ortadan kalkıyor.
+        driver.close();
     }
 }

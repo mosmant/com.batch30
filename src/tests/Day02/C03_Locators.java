@@ -10,7 +10,7 @@ import java.util.List;
 public class C03_Locators {
     public static void main(String[] args) throws InterruptedException {
 
-
+        // LOCATORS name, id, className, tagName, linkText, partialText
         // 1. Bir class oluşturun: LocatorsIntro
         // 2. Main method oluşturun ve aşağıdaki görevi tamamlayın.
         System.setProperty("webdriver.chrome.driver","C:\\Users\\USER\\Documents\\selenium dependencies\\drivers\\chromedriver.exe");
